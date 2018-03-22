@@ -5,3 +5,4 @@
 #include <ctime>
 #include "sha256.h"
 #include "Blockchain.h"
+#include <iostream>

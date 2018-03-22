@@ -4,8 +4,10 @@
 class Blockchain {
 public:
 	Blockchain();
-
-	void addBlock(Block);
+	int getNextChainIndex();
+	void addBlock(Block blockToAdd);
+	Block fetchLastBlock();
+	Block fetchBlock(int index);
 private:
 	void generateGenesisBlock();
 	std::vector<Block> chain;

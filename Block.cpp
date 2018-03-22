@@ -6,7 +6,7 @@ Block::Block(int ind, std::string dat, std::string previousBlockHashProvided)
 	index = ind;
 	data = dat;
 	previousBlockHash = previousBlockHashProvided;
-	blockHash = generateBlockHash(data, previousBlockHash); 		// no proof of work is implemented in this version yet
+	blockHash = generateBlockHash(data, previousBlockHash);			// no proof of work is implemented in this version yet
 }
 
 std::string Block::generateBlockHash(std::string dat, std::string pHash) {
@@ -17,7 +17,7 @@ std::string Block::generateBlockHash(std::string dat, std::string pHash) {
 // This way, once the variable is set in the constructor, the user has access to only reading it and not modifying it. 
 std::string Block::getBlockHash()
 {
-	return std::string();		
+	return std::string();
 }
 
 // returns previous block hash based on provided data

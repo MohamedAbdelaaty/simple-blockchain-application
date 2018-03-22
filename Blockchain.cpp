@@ -1,7 +1,18 @@
 #include "Blockchain.h"
 
 Blockchain::Blockchain() {
-	generateGenesisBlock();			// the beginning of any blockchain requires a genesis block which is generated in the constructor as a start poing for the chain
+	generateGenesisBlock();				// the beginning of any blockchain requires a genesis block which is generated in the constructor as a start poing for the chain
+}
+
+int Blockchain::getNextChainIndex()
+{
+	return chain.size();
+}
+
+Block Blockchain::fetchLastBlock()
+{
+	Block lastBlock = chain.at(getNextChainIndex() - 1);
+	return lastBlock;
 }
 
 void Blockchain::addBlock(Block blockToAdd)
@@ -11,11 +22,16 @@ void Blockchain::addBlock(Block blockToAdd)
 	return;
 }
 
+Block Blockchain::fetchBlock(int i)
+{
+	return chain.at(i);
+}
+
 void Blockchain::generateGenesisBlock() {
-	Block genesisBlock(0, "genesis data", "000");	// generating the genesis block using initialization data
-							// index = 0
-							// Data = "genesis data"
-							// Previous block hash = "000"
-	addBlock(genesisBlock);				// adds block to chain
+	Block genesisBlock(0, "genesis data", "000");	// generating the genesis block using initialization data\
+													// index = 0
+													// Data = "genesis data"
+													// Previous block hash = "000"
+	addBlock(genesisBlock);							// adds block to chain
 }
 
