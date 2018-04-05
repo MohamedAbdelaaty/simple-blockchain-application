@@ -1,3 +1,15 @@
+/*
+	Created by: Mohamed Abdelaaty
+	
+	Created On: March 17th
+	
+	Published On: March 21st
+	
+	Last updated: April 4th
+	
+	DISCLAIMER: this was made for educational, non-profit purposes only.
+*/
+
 #include "Blockchain.h"
 
 Blockchain::Blockchain() {
@@ -29,9 +41,9 @@ Block Blockchain::fetchBlock(int i)
 
 void Blockchain::generateGenesisBlock() {
 	Block genesisBlock(0, "genesis data", "000");	// generating the genesis block using initialization data\
-													// index = 0
-													// Data = "genesis data"
-													// Previous block hash = "000"
-	addBlock(genesisBlock);							// adds block to chain
+								// index = 0
+								// Data = "genesis data"
+								// Previous block hash = "000"
+	addBlock(genesisBlock);				// adds block to chain
 }
 
