@@ -6,12 +6,18 @@
 	
 	Published On: March 21st
 	
-	Last updated: March 22nd
+	Last updated: April 4th
 	
-	DISCLAIMER: this was made for educational purposes only.
+	DISCLAIMER: this was made for educational, non-profit purposes only.
 
 */
-#include "Dependencies.h"
+#include <string>
+#include <vector>
+#include "Block.h"
+#include <ctime>
+#include "sha256.h"
+#include "Blockchain.h"
+#include <iostream>
 
 int main() {
 	Blockchain ourBlockChain();
